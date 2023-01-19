@@ -26,10 +26,10 @@ def get_acs_user():
 def get_acs_token():
     identity = CommunicationUserIdentifier(HOLOLENS_ACS_TOKEN)
     token_result = router.client.get_token(identity, ["voip"])
-    return token_result
+    return token_result[0]
 
 @router.get("/token/web")
 def get_acs_token():
     identity = CommunicationUserIdentifier(WEB_ACS_TOKEN)
     token_result = router.client.get_token(identity, ["voip"])
-    return token_result
+    return token_result[0]
