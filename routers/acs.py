@@ -33,3 +33,9 @@ def get_acs_token():
     identity = CommunicationUserIdentifier(WEB_ACS_TOKEN)
     token_result = router.client.get_token(identity, ["voip"])
     return token_result[0]
+
+@router.get("/grpcall/idtoken")
+def get_grpcall_idtoken():
+    identity = router.client.create_user()
+    token_result = router.client.get_token(identity, ["voip"])
+    return token_result[0]
