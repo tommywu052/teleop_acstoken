@@ -1,0 +1,28 @@
+{
+    "terminal.integrated.automationProfile.windows": {},
+    "terminal.integrated.automationProfile.linux": {},
+    "terminal.integrated.profiles.windows": {
+
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Anaconda":{
+            "path": ["%windir%\\System32\\cmd.exe "/K" C:\\ProgramData\\Anaconda3\\Scripts\\activate.bat C:\\ProgramData\\Anaconda3"]
+            ,
+            "args": [],
+            "icon": "terminal-cmd"
+        }
+    }
+}
